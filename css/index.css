@@ -30,7 +30,7 @@ header {
 
 .icon {
     width: 55px;
-    height: auto;
+    height: 55px;
     margin-right: 10px;
     border-radius: 5px;
 }
@@ -101,12 +101,11 @@ header {
 }
 
 .cover__info div {
-    position: absolute;
-    bottom: 0;
+    margin-top: 80px
 }
 
 .cover__info p {
-    font-size: 60px;
+    font-size: 4vw;
 }
 
 .cover__screens  {
@@ -116,7 +115,7 @@ header {
 }
 
 .cover__screens img {
-    width: 300px;
+    width: 15vw;
     border-radius: 10px;
 }
 
@@ -147,14 +146,19 @@ header {
 }
 
 .step img {
-    width: 300px;
+    width: 20vw;
     height: auto;
     border-radius: 20px;
+}
+
+.step p {
+   font-size: 25px;
 }
 
 .features {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 40px;
 }
