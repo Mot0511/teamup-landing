@@ -14,15 +14,28 @@
         margin-right: 20px;
     }
     .step img {
-        width: 400px;
+        width: 100%;
     }
     .step p {
         text-align: center;
     }
+    .feature img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 1100px) {
+    body {
+        padding: 0 20px;
+    }
+    header {
+
+    }
+    header .btn {
+        font-size: 16px;
+    }
     .brand {
+        margin-right: 20px;
         align-items: center;
     }
     header .btn {
@@ -41,7 +54,7 @@
         justify-content: center;
     }
     .cover__screens img {
-        width: 200px;
+        width: 190px;
     }
     .cover__info {
         align-items: center
