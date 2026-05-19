@@ -1,13 +1,15 @@
 'use client'
 import { supabase } from '@/services/supabase';
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const ForgotPassword = () => {
     const [password, setPassoword] = useState<string>('');
     const [isPasswordReseted, setIsPasswordReseted] = useState<boolean>(false);
+    const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const handleSubmit = async () => {
         if (!password) return;
+        setIsLoading(true)
         await supabase.auth.updateUser({
             'password': password
         })
@@ -25,7 +27,9 @@ const ForgotPassword = () => {
                 {
                     isPasswordReseted
                         ? 'Пароль успешно сброшен'
-                        : 'Cбросить пароль'
+                            : isLoading
+                                ? 'Подождите...'
+                                : 'Cбросить пароль'
                 }
             </button>
         </div>

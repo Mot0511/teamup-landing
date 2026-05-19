@@ -7,14 +7,14 @@ const ForgotPassword = () => {
     const [isRequested, setIsRequested] = useState<boolean>(false)
 
     const handleSubmit = async () => {
-        if (!email) return;
-        await supabase.auth.resetPasswordForEmail(
+        if (!email || isRequested) return;
+        setIsRequested(true)
+        supabase.auth.resetPasswordForEmail(
             email,
             {
-                redirectTo: 'http://localhost:3000/password/reset/'
+                redirectTo: 'https://teamupp.ru/password/reset/'
             }
         );
-        setIsRequested(true)
     }
 
     return (
