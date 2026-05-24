@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header .btn {
+    font-size: 16px;
+}
+.brand {
+    margin-right: 20px;
+    align-items: center;
+}
+.header .btn {
+    margin-top: 10px;
+}
