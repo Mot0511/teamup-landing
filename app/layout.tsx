@@ -31,7 +31,7 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Teamup</title>
-        <link rel="icon" href="../img/icon.png" />
+        <link rel="icon" href="icon.png" />
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
