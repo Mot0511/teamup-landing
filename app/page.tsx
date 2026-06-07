@@ -33,7 +33,7 @@ const Home = () => {
                         <div>
                             <a href="https://www.rustore.ru/catalog/app/ru.ballisty.teamup" target="_blank"><button className="btn rustore-btn">Скачать из RuStore</button><br /></a>
                             <a href="https://disk.yandex.ru/d/v3If2R3Ds2doCw" target="_blank"><button className="btn primary-btn">Скачать для Android (apk файл)</button><br /></a>
-                            <a href="https://disk.yandex.ru/d/Vf8K9thOcwetDg" target="_blank"><button className="btn secondary-btn">Скачать для Windows (exe файл)</button></a>
+                            <a href="https://disk.yandex.ru/d/3rX1_GBbZXrYpA" target="_blank"><button className="btn secondary-btn">Скачать для Windows (exe файл)</button></a>
                         </div>
                     </div>
                     <div className="cover__screens">
@@ -101,7 +101,7 @@ const Home = () => {
                     <h2>Скачать <span className="primary-text">Teamup</span></h2>
                     <a href="https://www.rustore.ru/catalog/app/ru.ballisty.teamup" target="_blank"><button className="btn rustore-btn">из RuStore</button></a>
                     <a href="https://disk.yandex.ru/d/v3If2R3Ds2doCw" target="_blank"><button className="btn primary-btn">для Android (apk)</button></a>
-                    <a href="https://disk.yandex.ru/d/Vf8K9thOcwetDg" target="_blank"><button className="btn secondary-btn">для Windows (exe)</button></a>
+                    <a href="https://disk.yandex.ru/d/3rX1_GBbZXrYpA" target="_blank"><button className="btn secondary-btn">для Windows (exe)</button></a>
                 </div>
                 <div className="block" id="aboutme">
                     <h2>О создателе</h2>
