@@ -1,4 +1,5 @@
 'use client'
+import { forgotPassword } from '@/services/passwordRecovery';
 import { supabase } from '@/services/supabase';
 import React, { useState } from 'react';
 
@@ -9,12 +10,7 @@ const ForgotPassword = () => {
     const handleSubmit = async () => {
         if (!email || isRequested) return;
         setIsRequested(true)
-        supabase.auth.resetPasswordForEmail(
-            email,
-            {
-                redirectTo: 'https://teamupp.ru/password/reset/'
-            }
-        );
+        await forgotPassword(email)
     }
 
     return (

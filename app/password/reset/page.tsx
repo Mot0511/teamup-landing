@@ -1,19 +1,26 @@
 'use client'
+import { resetPassword } from '@/services/passwordRecovery';
 import { supabase } from '@/services/supabase';
+import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
 const ForgotPassword = () => {
     const [password, setPassoword] = useState<string>('');
-    const [isPasswordReseted, setIsPasswordReseted] = useState<boolean>(false);
+    const [isPasswordReseted, setIsPasswordReseted] = useState<boolean>(false)
     const [isLoading, setIsLoading] = useState<boolean>(false)
+    const searchParams = useSearchParams()
 
     const handleSubmit = async () => {
         if (!password) return;
         setIsLoading(true)
-        await supabase.auth.updateUser({
-            'password': password
-        })
-        setIsPasswordReseted(true);
+        const email = searchParams.get('email')
+        const token = searchParams.get('token')
+        console.log(email)
+        console.log(token)
+        if (email != null && token != null) {
+            await resetPassword(email, password, token)
+            setIsPasswordReseted(true);
+        }
     }
 
     return (
